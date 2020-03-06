@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<HTML>
+	<HEAD>
+		<TITLE>First Form</TITLE>
+	</HEAD>
+	<BODY>
+	<HR>
+		<H1>Entry Level Information.</H1>
+		<H2>Please provide Information as below and hit Sumbit</H2>
+	<HR>
+		
+	<script>
+		function changeLabel() {
+			let lbl = document.getElementById('lblEmp');
+			let empName = document.getElementById('fName').value;
+	
+			lbl.innerText = empName + ", we are currently experiancing some slowness, please bare with us";       // TREATS EVERY CONTENT AS TEXT.
+		}
+	</script>
+
+	<form> <!--action="test.php" method="post" id="users"-->   
+		FirstName:<br> 
+		<input type="text" name="fName" id="fName"> 
+		<br>
+		LastName:<br> 
+		<input type="text" name="lName" id="lName"> 
+		<br> 
+		Email id:<br> 
+		<input type="text" name="email_id" id="email_id"> 
+		<br><br> 
+		SELECT GENDER 
+        <br> 
+        <input type="radio" name="gender" id="male"> 
+        <label for="male">Male</label><br> 
+        <input type="radio" name="gender" id="female"> 
+        <label for="female">Female</label>
+		<br><br> 
+        <label for="country">Country:</label> 
+        <select name="country" id="country">  
+            <option value="Australia">Australia</option>
+            <option value="Germany">Germany</option>
+            <option value="India">India</option> 
+            <option value="Singapore">Singapore</option>
+            <option value="UK">UK</option> 
+            <option value="USA">USA</option> 
+        </select> 
+		<br><br> 
+		<b>Select Job Type</b> 
+        <br> 
+        <input type="checkbox" name="jobType" id="public"> 
+        <label for="public">Public</label> 
+        <input type="checkbox" name="jobType" id="private"> 
+        <label for="private">Private</label> 
+        <input type="checkbox" name="jobType" id="business"> 
+        <label for="business">Business</label> 
+        <input type="checkbox" name="jobType" id="admin"> 
+        <label for="admin">Admin</label> 
+		<br><br> 
+        <label for="fileselect">Upload:</label> 
+        <input type="file" name="upload" id="fileselect">
+		<br><br> 
+        <label for="Details">Details:</label> 
+        <br> 
+        <textarea rows="5" cols="50" name="Description" id="Description"></textarea>
+		<br><br> 
+        <label for="Month">Select a number:</label> 
+        <select name="Month" id="Month">  
+            <option value="January">1</option>
+            <option value="January">2</option>
+            <option value="January">3</option>
+            <option value="January">4</option>
+            <option value="January">5</option>
+            <option value="January">6</option>
+            <option value="January">7</option>
+            <option value="January">8</option>
+            <option value="January">9</option>
+            <option value="January">10</option>
+            <option value="January">11</option>
+            <option value="January">12</option>
+        </select> 
+		<br><br> 
+        <input type="reset" value="Reset">
+        <input type="submit" value="Submit" onclick="changeLabel()" /> 
+		<br><br> 
+    	<label id="lblEmp">N/A</label>
+	  </form>
+	</BODY>
+</HTML>
